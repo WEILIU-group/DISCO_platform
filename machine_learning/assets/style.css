@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #f5f7fb;
+    --bg-accent: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(14, 165, 233, 0.08));
+    --card: #ffffff;
+    --card-border: #e5e7eb;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-2: #0ea5e9;
+    --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+html, body {
+    background: radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.08), transparent 26%),
+                radial-gradient(circle at 88% 8%, rgba(14, 165, 233, 0.08), transparent 28%),
+                var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    border-radius: 16px;
+    margin-top: 12px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    border-radius: 14px;
+    color: var(--text);
+}
+
+.card-header {
+    background: var(--bg-accent);
+    border-bottom: 1px solid var(--card-border);
+    color: var(--text);
+    font-weight: 700;
+}
+
+.upload-container {
+    border: 1px dashed #cbd5e1 !important;
+    background: #f8fafc;
+    color: var(--muted);
+    border-radius: 12px;
+    transition: border-color 150ms ease, background 150ms ease, box-shadow 150ms ease;
+}
+.upload-container:hover {
+    border-color: var(--accent);
+    background: #eef2ff;
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.12);
+}
+
+.btn, .btn-primary, .btn-secondary, .btn-success, .btn-info, .btn-warning {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.12);
+}
+.btn-primary {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+}
+.btn-success {
+    background: linear-gradient(120deg, #22c55e, #16a34a);
+}
+.btn-info {
+    background: linear-gradient(120deg, #0ea5e9, #22d3ee);
+    color: #0f172a;
+}
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-info {
+    border: 1px solid #cbd5e1;
+    color: var(--text);
+}
+
+label, .form-label, .small, .text-muted {
+    color: var(--muted) !important;
+}
+
+input, .form-control, .dash-input, .Select-control, .Select-value, .Select-menu-outer {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    color: var(--text) !important;
+    border-radius: 10px !important;
+}
+
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+    color: var(--text) !important;
+}
+
+.dash-table-container .dash-spreadsheet-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.badge.bg-secondary {
+    background: #e0f2fe !important;
+    color: var(--text);
+    border: 1px solid #bfdbfe;
+}
+
+hr {
+    border-color: #e5e7eb;
+}
+
+.js-plotly-plot .plotly {
+    background: transparent !important;
+}
