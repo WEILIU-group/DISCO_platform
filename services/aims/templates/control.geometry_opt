@@ -1,0 +1,12 @@
+# FHI-aims control.in (geometry optimization)
+xc                 {xc}
+relax_geometry     bfgs {fmax}
+charge             {charge}
+spin               none
+sc_accuracy_rho    {acc_rho}
+sc_accuracy_eev    {acc_eev}
+sc_accuracy_etot   {acc_etot}
+sc_iter_limit      {sc_iter}
+k_grid             {k1} {k2} {k3}
+compute_forces     .true.
+output cube dens    .false.

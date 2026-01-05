@@ -1,0 +1,99 @@
+{
+  "remote_server": {
+    "hostname": "10.10.69.102",
+    "port": 22,
+    "username": "zyy",
+    "password": "zyy249720"
+  },
+  "local_paths": {
+    "data_dir": "./data",
+    "results_root": "./outputs",
+    "results_dir": "./outputs", 
+    "temp_dir": "./temp",
+    "elements_csv": "elements_properties_all.csv"
+  },
+  "remote_paths": {
+    "work_base": ".",
+    "sisso_base": "SISSO_JOBS",
+    "vasp_base": "VASP_JOBS",
+    "aims_base": "AIMS_JOBS"
+  },
+  "sisso_defaults": {
+    "desc_dim": 2,
+    "fcomplexity": 3,
+    "ops": "(+)(-)(*)(/)",
+    "nmodel": 100,
+    "method_so": "L0"
+  },
+  "vasp_defaults": {
+    "encut": 500,
+    "nsw": 100,
+    "ibrion": 2,
+    "potim": 0.5,
+    "ediff": 1e-5,
+    "prec": "High",
+    "nelm": 100,
+    "ismear": 0,
+    "sigma": 0.05,
+    "kmesh": [4, 4, 4]
+  },
+  "queue_system": {
+    "type": "slurm",
+    "poll_interval": 5,
+    "max_wait_time": 1800
+  },
+  "active_cluster": "default",
+  "clusters": {
+    "default": {
+      "remote_server": {
+        "hostname": "10.10.69.102",
+        "port": 22,
+        "username": "zyy",
+        "password": "zyy249720"
+      },
+      "queue": {
+        "type": "slurm",
+        "partition": "vasp",
+        "time_limit": "24:00:00",
+        "nodes": 1,
+        "ntasks_per_node": 30,
+        "poll_interval": 5,
+        "max_wait_time": 1800
+      },
+      "remote_paths": {
+        "work_base": ".",
+        "sisso_base": "SISSO_JOBS",
+        "vasp_base": "VASP_JOBS",
+        "aims_base": "AIMS_JOBS"
+      }
+    },
+    "aliyun_root": {
+      "remote_server": {
+        "hostname": "120.55.2.205",
+        "port": 22,
+        "username": "root",
+        "password": "zyy249720"
+      },
+      "queue": {
+        "type": "slurm",
+        "partition": "vasp",
+        "time_limit": "24:00:00",
+        "nodes": 1,
+        "ntasks_per_node": 30,
+        "poll_interval": 5,
+        "max_wait_time": 1800
+      },
+      "remote_paths": {
+        "work_base": ".",
+        "sisso_base": "SISSO_JOBS",
+        "vasp_base": "VASP_JOBS",
+        "aims_base": "AIMS_JOBS"
+      }
+    }
+  },
+  "app": {
+    "debug": false,
+    "port": 8050,
+    "host": "127.0.0.1"
+  }
+}

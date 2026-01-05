@@ -1,0 +1,17 @@
+# Dash/Streamlit frontends
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y build-essential git && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.dash.txt /app/requirements.dash.txt
+RUN pip install --no-cache-dir -r /app/requirements.dash.txt
+
+COPY . /app
+
+# Default command targets the high-throughput dash app; override with CMD to run others
+CMD ["python", "high-throught-calcultion/app.py"]
