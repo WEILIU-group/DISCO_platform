@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #f5f7fb;
+    --bg-accent: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(14, 165, 233, 0.08));
+    --card: #ffffff;
+    --card-border: #e5e7eb;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-2: #0ea5e9;
+    --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+html, body {
+    background: radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.08), transparent 26%),
+                radial-gradient(circle at 88% 8%, rgba(14, 165, 233, 0.08), transparent 28%),
+                var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    border-radius: 16px;
+    margin-top: 12px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--text) !important;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    border-radius: 14px;
+    color: var(--text);
+}
+
+.card-header {
+    background: var(--bg-accent);
+    border-bottom: 1px solid var(--card-border);
+    color: var(--text);
+    font-weight: 700;
+}
+
+.upload-container {
+    border: 2px dashed #cbd5e1 !important;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--muted);
+}
+
+.upload-container:hover {
+    border-color: var(--accent);
+    background: #eef2ff;
+    color: var(--accent);
+    box-shadow: 0 10px 28px rgba(37, 99, 235, 0.12);
+}
+
+.btn, .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-info, .btn-warning {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.12);
+}
+
+.btn-primary {
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+}
+
+.btn-success {
+    background: linear-gradient(120deg, #22c55e, #16a34a);
+}
+
+.btn-danger {
+    background: linear-gradient(120deg, #ef4444, #dc2626);
+}
+
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-info {
+    border: 1px solid #cbd5e1;
+    color: var(--text);
+}
+
+label, .form-label, .small, .text-muted {
+    color: var(--muted) !important;
+}
+
+input, .form-control, .dash-input, .Select-control, .Select-value, .Select-menu-outer {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    color: var(--text) !important;
+    border-radius: 10px !important;
+}
+
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+    color: var(--text) !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #4a5568;
+    border-bottom: 2px solid #edf2f7;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td {
+    padding: 12px;
+    color: #4a5568;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.js-plotly-plot .plotly {
+    background: transparent !important;
+}

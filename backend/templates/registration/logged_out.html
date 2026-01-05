@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>已退出 - DISCO</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f7f7; display: flex; align-items: center; justify-content: center; height: 100vh; }
+        .card { background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); width: 360px; text-align: center; }
+        h2 { margin-bottom: 12px; }
+        a { color: #4361ee; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>已退出登录</h2>
+        <p>你已安全退出。</p>
+        <p><a href="/">返回首页</a> 或 <a href="{% url 'login' %}">重新登录</a></p>
+    </div>
+</body>
+</html>
